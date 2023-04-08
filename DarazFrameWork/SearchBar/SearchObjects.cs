@@ -76,9 +76,10 @@ namespace DarazFrameWork.SearchBar
             Scroll(Pic);
 
             Thread.Sleep(5000);
+            ScreenShot();
 
-            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-            screenshot.SaveAsFile(@".\\Screenshot.png", ScreenshotImageFormat.Png);
+            //Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            //screenshot.SaveAsFile(@".\\Screenshot.png", ScreenshotImageFormat.Png);
 
             //ScreenShot();
             //var e = driver.FindElement(Move);
@@ -87,7 +88,7 @@ namespace DarazFrameWork.SearchBar
             //.ExecuteScript("arguments[0].scrollIntoView(true);", e);
 
 
-            //Close();
+            Close();
         }
 
 

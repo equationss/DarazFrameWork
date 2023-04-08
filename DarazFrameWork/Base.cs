@@ -175,18 +175,8 @@ namespace DarazFrameWork
 
         public void ScreenShot()
         {
-            try
-            {
-                //IWebDriver driver = new ChromeDriver();
-                // Taking a full-screen screenshot
-                Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-                screenshot.SaveAsFile(@".\\Screenshot.png", ScreenshotImageFormat.Png);
-            }
-            catch (Exception e)
-            {
-                Console.Write(e.StackTrace);
-            }
-
+            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+            screenshot.SaveAsFile(@".\\Screenshot.png", ScreenshotImageFormat.Png);
         }
     }
 }

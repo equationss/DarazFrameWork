@@ -13,14 +13,20 @@ namespace DarazFrameWork.Login
     [TestClass]
     public class LoginMethod : Base
     {
+        public TestContext TestContext { get; set; }
+
         LoginObjects Object = new LoginObjects();
 
         [TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "Daraz.csv", "Daraz#csv", DataAccessMethod.Sequential)]
         public void ValidLogin()
         {
+            string user = TestContext.DataRow["User"].ToString();
+            string pass = TestContext.DataRow["Pass"].ToString();
             Driver("Chrome");
             driver.Navigate().GoToUrl("https://member.daraz.pk/user/login");
-            Object.login("TestProject@mailinator.com","bootcamp123");
+            //Object.login("TestProject@mailinator.com","bootcamp123");
+            Object.login(user, pass);
          
 
         }
