@@ -88,7 +88,7 @@ namespace DarazFrameWork.SearchBar
             //.ExecuteScript("arguments[0].scrollIntoView(true);", e);
 
 
-            Close();
+            //Close();
         }
 
 

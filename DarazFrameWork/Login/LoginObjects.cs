@@ -30,12 +30,15 @@ namespace DarazFrameWork.Login
             FindElement(PasswordField);
             SendKeys(PasswordField, Password);
             ClickElement(LoginBtn);
+        }
 
-            //IWebElement Label = driver.FindElement(Validation);
-            //string text= Label.Text;
+        //IWebElement Label = driver.FindElement(Validation);
+        //string text= Label.Text;
 
-            //while (true)
-            //{
+        //while (true)
+        //{
+        public void loginValidate()
+        {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.TitleContains("Manage My Account"));
 
@@ -49,56 +52,58 @@ namespace DarazFrameWork.Login
             //string currentUrl = driver.CurrentUrl;
             string expected = "Manage My Account";
             Assert.AreEqual(expected, CurrentTittle);
-            Close();
-
-            //GetElementText(Validation);
-
-            ////ClickWebElement(Validation);
-            //try
-            //{
-            //    IWebElement dropdownElement = driver.FindElement(Validation);
-            //    SelectElement dropdown = new SelectElement(dropdownElement);
-            //    dropdown.SelectByValue("Logout");
-            //    IWebElement selectedOption = dropdown.SelectedOption;
-            //    string selectedOptionText = selectedOption.Text;
-            //    Console.Write("Selected option: " + selectedOptionText);
-            //}
-            //catch (UnexpectedTagNameException e)
-            //{
-            //    Console.WriteLine("Error: " + e.Message);
-            //}
-
-
-            //public void validation(string valid)
-            //{
-            //    FindElement(Validation, 60);
-            //    Dropdown(Validation, "value", valid);
-            //}
-
-
-
-            //IWebElement element = driver.FindElement(Validation);
-            //string text = element.Text;
-            //string expectedText = "Logout";
-
-            //Assert.AreEqual(expectedText, text, "The actual text does not match the expected text");
-            //Dropdown(Validation,"index",Manage)
-
-
-            //bool isLoggedIn = IsElementDisplayed(Validation);
-
-            //if (isLoggedIn)
-            //{
-            //    Console.Write("Login successful!");
-            //}
-            //else
-            //{
-            //    Console.Write("Login failed.");
-            //}
-
 
             //Close();
         }
+
+        //GetElementText(Validation);
+
+        ////ClickWebElement(Validation);
+        //try
+        //{
+        //    IWebElement dropdownElement = driver.FindElement(Validation);
+        //    SelectElement dropdown = new SelectElement(dropdownElement);
+        //    dropdown.SelectByValue("Logout");
+        //    IWebElement selectedOption = dropdown.SelectedOption;
+        //    string selectedOptionText = selectedOption.Text;
+        //    Console.Write("Selected option: " + selectedOptionText);
+        //}
+        //catch (UnexpectedTagNameException e)
+        //{
+        //    Console.WriteLine("Error: " + e.Message);
+        //}
+
+
+        //public void validation(string valid)
+        //{
+        //    FindElement(Validation, 60);
+        //    Dropdown(Validation, "value", valid);
+        //}
+
+
+
+        //IWebElement element = driver.FindElement(Validation);
+        //string text = element.Text;
+        //string expectedText = "Logout";
+
+        //Assert.AreEqual(expectedText, text, "The actual text does not match the expected text");
+        //Dropdown(Validation,"index",Manage)
+
+
+        //bool isLoggedIn = IsElementDisplayed(Validation);
+
+        //if (isLoggedIn)
+        //{
+        //    Console.Write("Login successful!");
+        //}
+        //else
+        //{
+        //    Console.Write("Login failed.");
+        //}
+
+
+        //Close();
     }
 }
+
 

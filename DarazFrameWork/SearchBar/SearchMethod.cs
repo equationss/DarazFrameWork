@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DarazFrameWork.SearchBar
 {
     [TestClass]
@@ -22,11 +23,11 @@ namespace DarazFrameWork.SearchBar
 
             Driver("Chrome");
             objects.Search(search);
-            objects.Sort(min,max);
+            objects.Sort(min, max);
 
 
 
-           
+
             //objects.Sort("Price low to high");
 
         }

@@ -1,41 +1,50 @@
-﻿//using Microsoft.VisualStudio.TestTools.UnitTesting;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using DarazFrameWork.Login;
+using DarazFrameWork.SearchBar;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using OpenQA.Selenium.Chrome;
 
-//namespace DarazFrameWork
-//{
-//    [TestClass]
-//    public class Execution
-//    {
-//        [AssemblyInitialize]
-//        public static void AssemblyStart(TestContext TestContext)
-//        {
-//            LoginObjects log = new LoginObjects();
-            
-//            Base.Driver("Chrome");
+namespace DarazFrameWork
+{
+    [TestClass]
+    public class Execution
+    {
+        //public TestContext TestContext { get; set; }
+        [AssemblyInitialize]
+        public static void AssemblyStart(TestContext TestContext)
+        {
+            LoginObjects log = new LoginObjects();
 
-//            log.sendLoginDetails("CjBilly06", "bootcamp");
+            //string user = TestContext.DataRow["User"].ToString();
+            //string pass = TestContext.DataRow["Pass"].ToString();
+            Base.Driver("Chrome");
+            Base.driver.Navigate().GoToUrl("https://member.daraz.pk/user/login");
+            //Object.login("TestProject@mailinator.com","bootcamp123");
+            log.login("TestProject@mailinator.com", "bootcamp123");
+            log.loginValidate();
 
-//        }
-//        [AssemblyCleanup]
-//        public static void AssemblyEnd()
-//        {
-//            Base.Close();
-//        }
+        }
+        [AssemblyCleanup]
+        public static void AssemblyEnd()
+        {
+            Base.Close();
+        }
 
 
-//        [TestMethod]
-//        public void TestMethod1()
-//        {
-//            Search_TM search = new Search_TM();
-//            BookHotel_TM bk = new BookHotel_TM();
-//            search.SearchUsingValidData();
-//            bk.bookWithValidData();
+        [TestMethod]
+        public void TestMethod1()
+        {
+            //SearchMethod search = new SearchMethod();
+            //BookHotel_TM bk = new BookHotel_TM();
+            //search.SearchQuerry();
+            //bk.bookWithValidData();
 
-//        }
-//    }
-//}
-    
+        }
+    }
+}
+

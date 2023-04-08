@@ -27,7 +27,8 @@ namespace DarazFrameWork.Login
             driver.Navigate().GoToUrl("https://member.daraz.pk/user/login");
             //Object.login("TestProject@mailinator.com","bootcamp123");
             Object.login(user, pass);
-         
+            Object.loginValidate();
+
 
         }
     }
