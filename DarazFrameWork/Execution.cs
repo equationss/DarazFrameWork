@@ -44,21 +44,21 @@ namespace DarazFrameWork
         [TestMethod]
         public void TestMethod1()
         {
-            PasswordMethod method = new PasswordMethod();
-            method.PassChange();
+            //PasswordMethod method = new PasswordMethod();
+            //method.PassChange();
             AddressMethod address = new AddressMethod();
             address.add();
-            
-            SearchMethod search = new SearchMethod();
-            search.SearchQuerry();
-            
+
+            //SearchMethod search = new SearchMethod();
+            //search.SearchQuerry();
+
 
 
             //CartMethod cart = new CartMethod();
             //cart.Cart();
 
 
-            
+
 
 
 

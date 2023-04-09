@@ -19,6 +19,7 @@ namespace DarazFrameWork.Cart
         By EmailField = By.XPath("//input[@placeholder='Please enter your Phone Number or Email']");
         By PasswordField = By.XPath("(//input[@data-meta='Field'])[2]");
         By LoginBtn = By.XPath("//button[text()='LOGIN']");
+        By Field2 = By.XPath("(//a[@class='recommend-product-item-link']//div)[2]"); 
         public void Cart(string Search)
         {
             ClickElement(logo);
@@ -26,6 +27,8 @@ namespace DarazFrameWork.Cart
             SendKeys(SearchField, Search);
             ClickElement(SearchBtn);
             ClickElement(Field1);
+            ClickElement(AddCartField);
+            ClickElement(Field2);
             ClickElement(AddCartField);
 
         }

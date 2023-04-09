@@ -19,6 +19,8 @@ namespace DarazFrameWork.Address
         By NumField = By.XPath("//input[@inputmode='numeric']");
         By LandmarkField = By.CssSelector("div#dialog-body-1>div:nth-of-type(2)>div>form>div>div>div:nth-of-type(2)>div:nth-of-type(2)>input");
         By Province = By.XPath("//label[text()='Province']/following-sibling::span");
+
+        //By Province = By.XPath("//*[@id=\"dialog-body-4\"]/div[2]/div/form/div/div[1]/div[1]/div[3]/span/span");
         By list = By.XPath("//li[@value='R3780131---Khyber Pakhtunkhwa']/following-sibling::li[1]");
         By label = By.XPath("//div[@class='mod-address-tag-content']//div[1]");
         By move = By.ClassName("mod-address-tag-title");
@@ -43,26 +45,115 @@ namespace DarazFrameWork.Address
             SendKeys(LandmarkField, lan);
 
 
-            IWebElement firstDropdown = driver.FindElement(Province);
-            SelectElement selectFirstDropdown = new SelectElement(firstDropdown);
-            selectFirstDropdown.SelectByText("Punjab");
-
-            // Wait until page is loaded completely
+            
+            IWebElement dropdown = driver.FindElement(Province);
+            dropdown.Click();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            IWebElement option = driver.FindElement(By.Name("Punjab"));
+            //((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].scrollIntoView(true);", option);
+            option.Click();
+            // option.Click();
 
-            // Wait until second dropdown is activated
-            IWebElement secondDropdown = wait.Until(ExpectedConditions.ElementToBeClickable(City));
+            //WebDriverWait wait2 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            ClickElement(label);
+            //Thread.Sleep(1000);
 
-            // Select a value from the second dropdown
-            SelectElement selectSecondDropdown = new SelectElement(secondDropdown);
-            selectSecondDropdown.SelectByText("Abdul Hakim");
+            //IWebElement dropdown2 = driver.FindElement(City);
+            //dropdown.Click();
+            //WebDriverWait wait2 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            //wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            //IWebElement option2 = driver.FindElement(By.Name("Abdul Hakim"));
+            //option.Click();
 
-            // Wait until page is loaded completely
-            wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+            IWebElement checkbox = driver.FindElement(CheckBox1);
+            checkbox.Click();
 
-            // Wait until second dropdown is activated again
-            secondDropdown = wait.Until(ExpectedConditions.ElementToBeClickable(Area));
+            IWebElement checkbox2 = driver.FindElement(CheckBox2);
+            checkbox2.Click();
+
+
+            //IWebElement dropdown3 = driver.FindElement(Area);
+            //dropdown.Click();
+            //WebDriverWait wait3 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            //wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            //IWebElement option3 = driver.FindElement(By.Name("Abdul Hakim"));
+            //option.Click();
+
+            //// Locate the province dropdown and select "Punjab"
+            //IWebElement provinceDropdown = driver.FindElement(Province);
+            //SelectElement selectProvinceDropdown = new SelectElement(provinceDropdown);
+            //selectProvinceDropdown.SelectByText("Punjab");
+
+            //// Wait for the city dropdown options to load
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            //wait.Until(ExpectedConditions.ElementExists(City));
+
+            //// Locate the city dropdown and select "Abdul Hakim"
+            //IWebElement cityDropdown = driver.FindElement(City);
+            //SelectElement selectCityDropdown = new SelectElement(cityDropdown);
+            //selectCityDropdown.SelectByText("Abdul Hakim");
+
+            //// Wait for the area dropdown options to load
+            //wait.Until(ExpectedConditions.ElementExists(Area));
+
+            //// Locate the area dropdown options and find the option with text "Abdul Hakim"
+            //IWebElement areaDropdown = driver.FindElement(Area);
+            //SelectElement selectAreaDropdown = new SelectElement(areaDropdown);
+            //bool isOptionFound = false;
+            //foreach (IWebElement option in selectAreaDropdown.Options)
+            //{
+            //    if (option.Text == "Abdul Hakim")
+            //    {
+            //        selectAreaDropdown.SelectByText("Abdul Hakim");
+            //        isOptionFound = true;
+            //        break;
+            //    }
+            //}
+
+            //// If the "Abdul Hakim" option is not found, select the first available option
+            //if (!isOptionFound)
+            //{
+            //    selectAreaDropdown.SelectByIndex(0);
+            //}
+
+
+
+
+
+
+
+
+            // FindElement(Province);
+            //ClickElement(Province);
+            //SendKeys("\u0050");
+            //Keys.Control
+
+
+            //IWebElement firstDropdown = driver.FindElement(Province);
+            //firstDropdown.Click();
+            //firstDropdown.SendKeys("\u0050");
+            //firstDropdown.SendKeys(Keys.Enter);
+            //SelectElement selectFirstDropdown = new SelectElement(firstDropdown);
+            //selectFirstDropdown.Keys
+            //selectFirstDropdown.SelectByText("Punjab");
+
+            //// Wait until page is loaded completely
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            //wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+
+            //// Wait until second dropdown is activated
+            //IWebElement secondDropdown = wait.Until(ExpectedConditions.ElementToBeClickable(City));
+
+            //// Select a value from the second dropdown
+            //SelectElement selectSecondDropdown = new SelectElement(secondDropdown);
+            //selectSecondDropdown.SelectByText("Abdul Hakim");
+
+            //// Wait until page is loaded completely
+            //wait.Until(driver => ((IJavaScriptExecutor)driver).ExecuteScript("return document.readyState").Equals("complete"));
+
+            //// Wait until second dropdown is activated again
+            //secondDropdown = wait.Until(ExpectedConditions.ElementToBeClickable(Area));
 
 
             //try
@@ -189,7 +280,7 @@ namespace DarazFrameWork.Address
             //}
 
 
-            ClickElement(label);
+           
 
 
 
@@ -211,11 +302,7 @@ namespace DarazFrameWork.Address
             //IWebElement select3 = driver.FindElement(list3);
             //select3.Click();
 
-            IWebElement checkbox = driver.FindElement(CheckBox1);
-            checkbox.Click();
-
-            IWebElement checkbox2 = driver.FindElement(CheckBox2);
-            checkbox2.Click();
+           
 
             //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             //IWebElement myElement = wait.Until(ExpectedConditions.ElementIsVisible(CheckBox2));
