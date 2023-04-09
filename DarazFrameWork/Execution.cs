@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using OpenQA.Selenium.Chrome;
+using DarazFrameWork.Cart;
+using System.Threading;
+using DarazFrameWork.Address;
 
 namespace DarazFrameWork
 {
@@ -16,6 +19,7 @@ namespace DarazFrameWork
     {
         //public TestContext TestContext { get; set; }
         [AssemblyInitialize]
+
         public static void AssemblyStart(TestContext TestContext)
         {
             LoginObjects log = new LoginObjects();
@@ -39,10 +43,23 @@ namespace DarazFrameWork
         [TestMethod]
         public void TestMethod1()
         {
+
+            AddressMethod address = new AddressMethod();
+            address.add();
+            
             //SearchMethod search = new SearchMethod();
             //BookHotel_TM bk = new BookHotel_TM();
             //search.SearchQuerry();
             //bk.bookWithValidData();
+
+
+            //CartMethod cart = new CartMethod();
+            //cart.Cart();
+
+
+            
+
+
 
         }
     }

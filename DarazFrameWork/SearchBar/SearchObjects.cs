@@ -25,6 +25,7 @@ namespace DarazFrameWork.SearchBar
         By Pic = By.ClassName("box--LNmE6");
 
 
+
         public void Search(string Search)
         {
             FindElement(SearchField);

@@ -9,6 +9,7 @@ namespace DarazFrameWork.Cart
 {
     public class CartObjects : Base
     {
+        By logo = By.XPath("//img[@alt='Daraz']");
         By SearchField = By.Id("q");
         By SearchBtn = By.ClassName("search-box__button--1oH7");
         //By Element1 = By.XPath("//img[@src='https://gcp-img.slatic.net/lazada/7f7b4f20-49b9-4ad3-903d-c12b62a67b17_PK-388-180.png']");
@@ -20,7 +21,7 @@ namespace DarazFrameWork.Cart
         By LoginBtn = By.XPath("//button[text()='LOGIN']");
         public void Cart(string Search)
         {
-
+            ClickElement(logo);
             FindElement(SearchField);
             SendKeys(SearchField, Search);
             ClickElement(SearchBtn);

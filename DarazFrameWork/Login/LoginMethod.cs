@@ -23,8 +23,8 @@ namespace DarazFrameWork.Login
         {
             string user = TestContext.DataRow["User"].ToString();
             string pass = TestContext.DataRow["Pass"].ToString();
-            Driver("Chrome");
-            driver.Navigate().GoToUrl("https://member.daraz.pk/user/login");
+            //Driver("Chrome");
+            //driver.Navigate().GoToUrl("https://member.daraz.pk/user/login");
             //Object.login("TestProject@mailinator.com","bootcamp123");
             Object.login(user, pass);
             Object.loginValidate();
