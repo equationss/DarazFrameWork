@@ -46,8 +46,8 @@ namespace DarazFrameWork
         {
             PasswordMethod method = new PasswordMethod();
             method.PassChange();
-            AddressMethod address = new AddressMethod();
-            address.add();
+            //AddressMethod address = new AddressMethod();
+            //address.add();
             
             SearchMethod search = new SearchMethod();
             search.SearchQuerry();
