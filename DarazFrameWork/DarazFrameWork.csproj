@@ -65,9 +65,13 @@
     <Compile Include="Cart\CartMethod.cs" />
     <Compile Include="Cart\CartObjects.cs" />
     <Compile Include="Execution.cs" />
+    <Compile Include="FlashSale\FlashSaleMethod.cs" />
+    <Compile Include="FlashSale\FlashSaleObjects.cs" />
     <Compile Include="Login\LoginMethod.cs" />
     <Compile Include="Login\LoginObjects.cs" />
     <Compile Include="Base.cs" />
+    <Compile Include="Password\PasswordMethod.cs" />
+    <Compile Include="Password\PasswordObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchBar\SearchMethod.cs" />
     <Compile Include="SearchBar\SearchObjects.cs" />

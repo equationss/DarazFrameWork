@@ -11,6 +11,7 @@ using OpenQA.Selenium.Chrome;
 using DarazFrameWork.Cart;
 using System.Threading;
 using DarazFrameWork.Address;
+using DarazFrameWork.Password;
 
 namespace DarazFrameWork
 {
@@ -36,21 +37,21 @@ namespace DarazFrameWork
         [AssemblyCleanup]
         public static void AssemblyEnd()
         {
-            Base.Close();
+            //Base.Close();
         }
 
 
         [TestMethod]
         public void TestMethod1()
         {
-
+            PasswordMethod method = new PasswordMethod();
+            method.PassChange();
             AddressMethod address = new AddressMethod();
             address.add();
             
-            //SearchMethod search = new SearchMethod();
-            //BookHotel_TM bk = new BookHotel_TM();
-            //search.SearchQuerry();
-            //bk.bookWithValidData();
+            SearchMethod search = new SearchMethod();
+            search.SearchQuerry();
+            
 
 
             //CartMethod cart = new CartMethod();

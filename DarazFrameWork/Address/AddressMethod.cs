@@ -19,7 +19,8 @@ namespace DarazFrameWork.Address
         public void add()
         {
             Obj.EditAddr("Raja Junaid","Summan Burj","03113117444","Logic School");
-           
+            //Obj.province("Punjab");
+            //Obj.click();
         }
 
     }
