@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System;
@@ -19,6 +20,7 @@ namespace DarazFrameWork.Address
         By NumField = By.XPath("//input[@inputmode='numeric']");
         By LandmarkField = By.CssSelector("div#dialog-body-1>div:nth-of-type(2)>div>form>div>div>div:nth-of-type(2)>div:nth-of-type(2)>input");
         By Province = By.XPath("//label[text()='Province']/following-sibling::span");
+        By Validate = By.ClassName("mod-address-book-card-name");
 
         //By Province = By.XPath("//*[@id=\"dialog-body-4\"]/div[2]/div/form/div/div[1]/div[1]/div[3]/span/span");
         By list = By.XPath("//li[@value='R3780131---Khyber Pakhtunkhwa']/following-sibling::li[1]");
@@ -60,11 +62,11 @@ namespace DarazFrameWork.Address
             //Thread.Sleep(1000);
 
             IWebElement dropdown2 = driver.FindElement(City);
-            dropdown.Click();
+            dropdown2.Click();
             WebDriverWait wait2 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            wait2.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
             IWebElement option2 = driver.FindElement(By.Name("Abdul Hakim"));
-            option.Click();
+            option2.Click();
 
             IWebElement checkbox = driver.FindElement(CheckBox1);
             checkbox.Click();
@@ -74,11 +76,11 @@ namespace DarazFrameWork.Address
 
 
             IWebElement dropdown3 = driver.FindElement(Area);
-            dropdown.Click();
+            dropdown3.Click();
             WebDriverWait wait3 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            wait3.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
             IWebElement option3 = driver.FindElement(By.Name("Abdul Hakim"));
-            option.Click();
+            option3.Click();
 
             //// Locate the province dropdown and select "Punjab"
             //IWebElement provinceDropdown = driver.FindElement(Province);
@@ -308,6 +310,31 @@ namespace DarazFrameWork.Address
             //IWebElement myElement = wait.Until(ExpectedConditions.ElementIsVisible(CheckBox2));
 
             ClickElement(SubmitBtn);
+            //IWebElement element = driver.FindElement(Validate);
+            //string text = element.Text;
+            //Console.WriteLine(text);
+
+            IWebElement element = driver.FindElement(Validate);
+            string actualText = element.Text;
+            string expectedText = "Raja Junaid";
+            Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected");
+
+
+            //WebDriverWait wait4 = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            //wait4.Until(ExpectedConditions.TitleContains("Raja Junaid"));
+
+            //string CurrentTittle = driver.Title.ToString();
+            //Console.Write(CurrentTittle);
+            ////Console.WriteLine("The current URL is: " + currentUrl);
+
+            //// add a delay to avoid overloading the browser
+            ////    Thread.Sleep(1000);
+            ////}
+            ////string currentUrl = driver.CurrentUrl;
+            //string expected = "Raja Junaid";
+            //Assert.AreEqual(expected, CurrentTittle);
+
+
         }
 
     }
