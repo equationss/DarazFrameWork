@@ -59,12 +59,12 @@ namespace DarazFrameWork.Address
             ClickElement(label);
             //Thread.Sleep(1000);
 
-            //IWebElement dropdown2 = driver.FindElement(City);
-            //dropdown.Click();
-            //WebDriverWait wait2 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            //wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
-            //IWebElement option2 = driver.FindElement(By.Name("Abdul Hakim"));
-            //option.Click();
+            IWebElement dropdown2 = driver.FindElement(City);
+            dropdown.Click();
+            WebDriverWait wait2 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            IWebElement option2 = driver.FindElement(By.Name("Abdul Hakim"));
+            option.Click();
 
             IWebElement checkbox = driver.FindElement(CheckBox1);
             checkbox.Click();
@@ -73,12 +73,12 @@ namespace DarazFrameWork.Address
             checkbox2.Click();
 
 
-            //IWebElement dropdown3 = driver.FindElement(Area);
-            //dropdown.Click();
-            //WebDriverWait wait3 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            //wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
-            //IWebElement option3 = driver.FindElement(By.Name("Abdul Hakim"));
-            //option.Click();
+            IWebElement dropdown3 = driver.FindElement(Area);
+            dropdown.Click();
+            WebDriverWait wait3 = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementExists(By.XPath("//div[contains(@class,'next-menu ver')]")));
+            IWebElement option3 = driver.FindElement(By.Name("Abdul Hakim"));
+            option.Click();
 
             //// Locate the province dropdown and select "Punjab"
             //IWebElement provinceDropdown = driver.FindElement(Province);
@@ -280,14 +280,14 @@ namespace DarazFrameWork.Address
             //}
 
 
-           
+
 
 
 
 
             //Scroll(move);
 
-            
+
 
 
             //IWebElement city = driver.FindElement(City);
@@ -302,7 +302,7 @@ namespace DarazFrameWork.Address
             //IWebElement select3 = driver.FindElement(list3);
             //select3.Click();
 
-           
+
 
             //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
             //IWebElement myElement = wait.Until(ExpectedConditions.ElementIsVisible(CheckBox2));
