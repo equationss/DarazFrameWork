@@ -56,7 +56,7 @@ namespace DarazFrameWork
         #region DriverClose
         public static void Close()
         {
-            driver.Close();
+            driver.Dispose();
         }
         #endregion
 
