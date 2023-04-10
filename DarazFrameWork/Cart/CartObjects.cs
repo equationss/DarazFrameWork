@@ -85,9 +85,9 @@ namespace DarazFrameWork.Cart
             ClickElement(DelField);
             ClickElement(RemoveAlert);
 
-            IWebElement element = driver.FindElement(Val);
-            string actualText = element.Text;
-            Console.Write(actualText);
+            //IWebElement element = driver.FindElement(Val);
+            //string actualText = element.Text;
+            //Console.Write(actualText);
             //string expectedText = "There are no items in this cart";
             //Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected");
 

@@ -23,13 +23,13 @@ namespace DarazFrameWork.Address
         By Validate = By.XPath("//small[text()='Default Shipping Address']");
 
         //By Province = By.XPath("//*[@id=\"dialog-body-4\"]/div[2]/div/form/div/div[1]/div[1]/div[3]/span/span");
-        By list = By.XPath("//li[@value='R3780131---Khyber Pakhtunkhwa']/following-sibling::li[1]");
+        //By list = By.XPath("//li[@value='R3780131---Khyber Pakhtunkhwa']/following-sibling::li[1]");
         By label = By.XPath("//div[@class='mod-address-tag-content']//div[1]");
-        By move = By.ClassName("mod-address-tag-title");
+        //By move = By.ClassName("mod-address-tag-title");
         By City = By.XPath("//label[text()='City']/following-sibling::span");
-        By list2 = By.CssSelector("li#RPK3");
+        ///By list2 = By.CssSelector("li#RPK3");
         By Area = By.XPath("//label[text()='Area']/following-sibling::span");
-        By list3 = By.XPath("//li[@value='RPK6423---Muslim Colony']");
+        //By list3 = By.XPath("//li[@value='RPK6423---Muslim Colony']");
         By CheckBox1 = By.XPath("//span[@class='next-checkbox-label']");
         By CheckBox2 = By.XPath("(//span[@class='next-checkbox-label'])[2]");
         By SubmitBtn = By.XPath("//button[@type='submit']");
