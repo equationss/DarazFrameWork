@@ -30,7 +30,7 @@ namespace DarazFrameWork
             Base.Driver("Chrome");
             Base.driver.Navigate().GoToUrl("https://member.daraz.pk/user/login");
             //Object.login("TestProject@mailinator.com","bootcamp123");
-            log.login("TestProject@mailinator.com", "bootcamp123");
+            log.login("TestProject@mailinator.com", "Test123");
             log.loginValidate();
 
         }
@@ -45,17 +45,17 @@ namespace DarazFrameWork
         public void Run()
         {
             
-            AddressMethod address = new AddressMethod();
-            address.add();
+            //AddressMethod address = new AddressMethod();
+            //address.add();
 
-            SearchMethod search = new SearchMethod();
-            search.SearchQuerry();
+            //SearchMethod search = new SearchMethod();
+            //search.SearchQuerry();
 
-            PasswordMethod method = new PasswordMethod();
-            method.PassChange();
+            //PasswordMethod method = new PasswordMethod();
+            //method.PassChange();
 
-            //CartMethod cart = new CartMethod();
-            //cart.Cart();
+            CartMethod cart = new CartMethod();
+            cart.Cart();
 
 
 

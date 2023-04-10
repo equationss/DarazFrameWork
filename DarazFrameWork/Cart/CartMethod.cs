@@ -28,7 +28,7 @@ namespace DarazFrameWork.Cart
             //driver.Navigate().GoToUrl("https://www.daraz.pk/dmart/");
             //objects.Search(search);
             //driver.Navigate().GoToUrl("https://www.daraz.pk/");
-            cart.Cart("Cup Flask");
+            cart.Cart("Cup Flask", "Iphone", "Drinks","Chips","Cat Food");
             //Thread.Sleep(10000);
             //cart.cartlogin(user, pass);
             //Object.login(user,pass);

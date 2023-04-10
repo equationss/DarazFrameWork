@@ -178,5 +178,10 @@ namespace DarazFrameWork
             Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
             screenshot.SaveAsFile(@".\\Screenshot.png", ScreenshotImageFormat.Png);
         }
+
+        public void back()
+        {
+            driver.Navigate().GoToUrl("https://www.daraz.pk/");
+        }
     }
 }
