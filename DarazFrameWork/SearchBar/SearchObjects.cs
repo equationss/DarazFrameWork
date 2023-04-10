@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SeleniumExtras.WaitHelpers;
 using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DarazFrameWork.SearchBar
 {
@@ -23,6 +24,7 @@ namespace DarazFrameWork.SearchBar
         By MaxField = By.XPath("//input[@placeholder='Max']");
         By SubmitBtn = By.XPath("(//button[@type='button'])[2]");
         By Pic = By.ClassName("box--LNmE6");
+        By Val = By.XPath("(//span[text()='Rs. 1,000'])[1]");
 
 
 
@@ -88,6 +90,10 @@ namespace DarazFrameWork.SearchBar
             //((IJavaScriptExecutor)driver)
             //.ExecuteScript("arguments[0].scrollIntoView(true);", e);
 
+            IWebElement element = driver.FindElement(Val);
+            string actualText = element.Text;
+            string expectedText = "Rs. 1,000";
+            Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected");
 
             //Close();
         }

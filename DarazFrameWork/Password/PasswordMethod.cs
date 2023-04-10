@@ -14,6 +14,7 @@ namespace DarazFrameWork.Password
         [TestMethod]
         public void PassChange()
         {
+            driver.Navigate().GoToUrl("https://member.daraz.pk/user/profile#/");
             obj.pass("bootcamp123", "BootCamp@123");
         }
     }

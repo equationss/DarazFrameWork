@@ -20,7 +20,7 @@ namespace DarazFrameWork.Address
         By NumField = By.XPath("//input[@inputmode='numeric']");
         By LandmarkField = By.CssSelector("div#dialog-body-1>div:nth-of-type(2)>div>form>div>div>div:nth-of-type(2)>div:nth-of-type(2)>input");
         By Province = By.XPath("//label[text()='Province']/following-sibling::span");
-        By Validate = By.ClassName("mod-address-book-card-name");
+        By Validate = By.XPath("//small[text()='Default Shipping Address']");
 
         //By Province = By.XPath("//*[@id=\"dialog-body-4\"]/div[2]/div/form/div/div[1]/div[1]/div[3]/span/span");
         By list = By.XPath("//li[@value='R3780131---Khyber Pakhtunkhwa']/following-sibling::li[1]");
@@ -316,7 +316,7 @@ namespace DarazFrameWork.Address
 
             IWebElement element = driver.FindElement(Validate);
             string actualText = element.Text;
-            string expectedText = "Raja Junaid";
+            string expectedText = "Default Shipping Address";
             Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected");
 
 
