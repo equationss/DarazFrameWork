@@ -12,6 +12,7 @@ using DarazFrameWork.Cart;
 using System.Threading;
 using DarazFrameWork.Address;
 using DarazFrameWork.Password;
+using DarazFrameWork.FlashSale;
 
 namespace DarazFrameWork
 {
@@ -37,7 +38,7 @@ namespace DarazFrameWork
         [AssemblyCleanup]
         public static void AssemblyEnd()
         {
-            //Base.Close();
+            Base.Close();
         }
 
 
@@ -54,8 +55,11 @@ namespace DarazFrameWork
             //PasswordMethod method = new PasswordMethod();
             //method.PassChange();
 
-            CartMethod cart = new CartMethod();
-            cart.Cart();
+            //CartMethod cart = new CartMethod();
+            //cart.Cart();
+
+            FlashSaleMethod flashSaleMethod = new FlashSaleMethod();
+            flashSaleMethod.sale();
 
 
 
