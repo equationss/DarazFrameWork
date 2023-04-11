@@ -14,13 +14,16 @@ namespace DarazFrameWork.Cart
     public class CartMethod : Base
     {
         public TestContext TestContext { get; set; }
+        
         CartObjects cart = new CartObjects();
+        
         //LoginObjects Object = new LoginObjects();
 
         [TestMethod]
         //[DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "Daraz.csv", "Daraz#csv", DataAccessMethod.Sequential)]
         public void Cart()
         {
+
             //string search = TestContext.DataRow["Search"].ToString();
             //string user = TestContext.DataRow["User"].ToString();
             //string pass = TestContext.DataRow["Pass"].ToString();
@@ -28,6 +31,8 @@ namespace DarazFrameWork.Cart
             //driver.Navigate().GoToUrl("https://www.daraz.pk/dmart/");
             //objects.Search(search);
             //driver.Navigate().GoToUrl("https://www.daraz.pk/");
+            
+            
             cart.Cart("Cup Flask", "Iphone", "Drinks","Chips","Cat Food");
             //Thread.Sleep(10000);
             //cart.cartlogin(user, pass);

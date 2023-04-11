@@ -47,21 +47,30 @@ namespace DarazFrameWork
         [TestMethod]
         public void Run()
         {
-            
-            //AddressMethod address = new AddressMethod();
-            //address.add();
 
-            //SearchMethod search = new SearchMethod();
-            //search.SearchQuerry();
+            AddressMethod address = new AddressMethod();
+            address.add();
+
+            Thread.Sleep(1000);
+
+            SearchMethod search = new SearchMethod();
+            search.SearchQuerry();
+
+            Thread.Sleep(1000);
+
+            FlashSaleMethod flashSaleMethod = new FlashSaleMethod();
+            flashSaleMethod.sale();
+            
+
+            Thread.Sleep(1000);
+
+            CartMethod cart = new CartMethod();
+            cart.Cart();
+
+            Thread.Sleep(1000);
 
             PasswordMethod method = new PasswordMethod();
             method.PassChange();
-
-            //CartMethod cart = new CartMethod();
-            //cart.Cart();
-
-            //FlashSaleMethod flashSaleMethod = new FlashSaleMethod();
-            //flashSaleMethod.sale();
 
 
 
