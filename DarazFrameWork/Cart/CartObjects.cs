@@ -26,9 +26,9 @@ namespace DarazFrameWork.Cart
         By Field3 = By.XPath("//div[@class='box--pRqdD']");
         By Field4 = By.XPath("//div[@class='box--pRqdD']");
         By Field5 = By.XPath("//div[@class='box--pRqdD']");
-        By CheckBox = By.XPath("//input[@type='checkbox']");
-        By DelField = By.ClassName("list-header-operation-text");
-        By RemoveAlert = By.ClassName("ok");
+        //By CheckBox = By.XPath("//input[@type='checkbox']");
+        //By DelField = By.ClassName("list-header-operation-text");
+        //By RemoveAlert = By.ClassName("ok");
         By Val = By.XPath("//div[text()='There are no items in this cart']");
         public void Cart(string Search, string Search2, string Search3, string Search4, string Search5)
         {
@@ -77,13 +77,13 @@ namespace DarazFrameWork.Cart
             ClickElement(AddCartField);
             Thread.Sleep(1000);
 
-            driver.Navigate().GoToUrl("https://cart.daraz.pk/cart");
+            //driver.Navigate().GoToUrl("https://cart.daraz.pk/cart");
 
-            IWebElement checkbox = driver.FindElement(CheckBox);
-            checkbox.Click();
+            //IWebElement checkbox = driver.FindElement(CheckBox);
+            //checkbox.Click();
 
-            ClickElement(DelField);
-            ClickElement(RemoveAlert);
+            //ClickElement(DelField);
+            //ClickElement(RemoveAlert);
 
             //IWebElement element = driver.FindElement(Val);
             //string actualText = element.Text;

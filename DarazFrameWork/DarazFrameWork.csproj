@@ -62,6 +62,8 @@
   <ItemGroup>
     <Compile Include="Address\AddressMethod.cs" />
     <Compile Include="Address\AddressObjects.cs" />
+    <Compile Include="CartDel\CartDelMethod.cs" />
+    <Compile Include="CartDel\CartDelObjects.cs" />
     <Compile Include="Cart\CartMethod.cs" />
     <Compile Include="Cart\CartObjects.cs" />
     <Compile Include="Execution.cs" />
