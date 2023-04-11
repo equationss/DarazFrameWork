@@ -54,14 +54,14 @@ namespace DarazFrameWork
             //SearchMethod search = new SearchMethod();
             //search.SearchQuerry();
 
-            //PasswordMethod method = new PasswordMethod();
-            //method.PassChange();
+            PasswordMethod method = new PasswordMethod();
+            method.PassChange();
 
             //CartMethod cart = new CartMethod();
             //cart.Cart();
 
-            FlashSaleMethod flashSaleMethod = new FlashSaleMethod();
-            flashSaleMethod.sale();
+            //FlashSaleMethod flashSaleMethod = new FlashSaleMethod();
+            //flashSaleMethod.sale();
 
 
 
