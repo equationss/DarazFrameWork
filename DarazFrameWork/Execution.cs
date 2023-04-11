@@ -51,27 +51,27 @@ namespace DarazFrameWork
 
             AddressMethod address = new AddressMethod();
             address.add();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             SearchMethod search = new SearchMethod();
             search.SearchQuerry();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             FlashSaleMethod flashSaleMethod = new FlashSaleMethod();
             flashSaleMethod.sale();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             CartMethod cart = new CartMethod();
             cart.Cart();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             CartDelMethod cartDel = new CartDelMethod();
             cartDel.del();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             PasswordMethod method = new PasswordMethod();
             method.PassChange();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
 
 
