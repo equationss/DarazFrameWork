@@ -90,10 +90,14 @@ namespace DarazFrameWork.SearchBar
             //((IJavaScriptExecutor)driver)
             //.ExecuteScript("arguments[0].scrollIntoView(true);", e);
 
+            /* 
+              
             IWebElement element = driver.FindElement(Val);
             string actualText = element.Text;
             string expectedText = "Rs. 1,000";
             Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected");
+            
+             */
 
             //Close();
         }

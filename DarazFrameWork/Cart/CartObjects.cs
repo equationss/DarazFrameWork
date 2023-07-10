@@ -16,7 +16,9 @@ namespace DarazFrameWork.Cart
         By SearchBtn = By.ClassName("search-box__button--1oH7");
         //By Element1 = By.XPath("//img[@src='https://gcp-img.slatic.net/lazada/7f7b4f20-49b9-4ad3-903d-c12b62a67b17_PK-388-180.png']");
         //By scroll = By.ClassName("fs-status-text");
-        By Field1 = By.LinkText("WILMAX ENGLAND Double Wall Thermo Glass Mug 400 ML");
+        By Field1 = By.XPath("(//div[@class='box--pRqdD boxWithSku--Abyff'])[1]");
+            
+            //.LinkText("WILMAX ENGLAND Double Wall Thermo Glass Mug 400 ML");
         By AddCartField = By.XPath("//span[text()='Add to Cart']");
         By EmailField = By.XPath("//input[@placeholder='Please enter your Phone Number or Email']");
         By PasswordField = By.XPath("(//input[@data-meta='Field'])[2]");

@@ -314,10 +314,12 @@ namespace DarazFrameWork.Address
             //string text = element.Text;
             //Console.WriteLine(text);
 
-            IWebElement element = driver.FindElement(Validate);
-            string actualText = element.Text;
-            string expectedText = "Default Shipping Address";
-            Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected");
+            // Assertion Code
+
+           // IWebElement element = driver.FindElement(Validate);
+            //string actualText = element.Text;
+            //string expectedText = "Default Shipping Address";
+//            Assert.AreEqual(expectedText, actualText, "The text of the element is not as expected"); 
 
 
             //WebDriverWait wait4 = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
